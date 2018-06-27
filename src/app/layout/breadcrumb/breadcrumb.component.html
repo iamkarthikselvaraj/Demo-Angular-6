@@ -1,0 +1,10 @@
+<section class="content-header">
+  <h1>
+    {{header}}
+  </h1>
+  <ol class="breadcrumb">
+    <ng-container *ngFor="let breadcrumb of breadcrumbs$ | async">
+      <li *ngIf="[breadcrumb.label.length]>0"><a [routerLink]="[breadcrumb.url]"> {{ breadcrumb.label }}</a></li>
+    </ng-container>
+  </ol>
+</section>
